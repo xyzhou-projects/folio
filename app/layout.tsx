@@ -1,16 +1,17 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sourcesans = Source_Sans_3({
   subsets: ["latin"],
+  variable: "--font-source-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
   subsets: ["latin"],
+  weight: ["500", "600", "700"], // Medium, Semibold, Bold
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -20,13 +21,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sourcesans.variable} ${outfit.variable} font-body min-h-screen bg-background antialiased`}
       >
         <ThemeProvider
           attribute="class"

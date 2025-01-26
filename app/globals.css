@@ -33,6 +33,24 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    /* Typography Scale */
+    --font-heading: var(--font-outfit);
+    --font-body: var(--font-source-sans);
+
+    /* Font Sizes */
+    --h1: 2.25rem;
+    --h2: 1.875rem;
+    --h3: 1.5rem;
+    --h4: 1.25rem;
+    --body: 1rem;
+    --small: 0.875rem;
+    --xs: 0.75rem;
+
+    /* Line Heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
   }
 
   .dark {
@@ -69,5 +87,30 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Typography Base Styles */
+@layer components {
+  .h1 {
+    @apply font-heading text-4xl font-bold leading-tight;
+  }
+  .h2 {
+    @apply font-heading text-3xl font-semibold leading-tight;
+  }
+  .h3 {
+    @apply font-heading text-2xl font-semibold leading-tight;
+  }
+  .h4 {
+    @apply font-heading text-xl font-medium leading-tight;
+  }
+  .body-large {
+    @apply font-body text-base leading-relaxed;
+  }
+  .body {
+    @apply font-body text-sm leading-normal;
+  }
+  .small {
+    @apply font-body text-xs leading-normal;
   }
 }

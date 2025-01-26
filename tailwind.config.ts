@@ -57,6 +57,10 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        heading: ["var(--font-outfit)"],
+        body: ["var(--font-source-sans)"],
+      },
     },
   },
   plugins: [animate],
