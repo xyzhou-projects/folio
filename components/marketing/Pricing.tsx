@@ -15,7 +15,7 @@ const features = [
   "Save progress locally",
   "No time limit",
   "Instant deployment",
-  "Your custom subdomain (you.fol.io)",
+  "Your custom subdomain (you.usefolio.online)",
   "Export your code",
 ];
 

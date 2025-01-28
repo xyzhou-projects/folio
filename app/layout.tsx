@@ -16,10 +16,10 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fol.io"), // your domain
+  metadataBase: new URL("https://usefolio.online"),
   title: {
-    template: "Fol.io | %s",
-    default: "Fol.io - Portfolio Builder",
+    template: "UseFolio | %s",
+    default: "UseFolio - Create Your Portfolio in Minutes",
   },
   description:
     "Build and deploy your professional portfolio with no coding required.",

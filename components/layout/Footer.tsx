@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/constants";
 import Link from "next/link";
 
 export default function Footer() {
@@ -85,7 +86,8 @@ export default function Footer() {
         </div>
         <div className="border-muted mt-8 border-t pt-8">
           <p className="text-muted-foreground text-center text-sm">
-            &copy; {new Date().getFullYear()} Fol.io. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
           </p>
         </div>
       </div>

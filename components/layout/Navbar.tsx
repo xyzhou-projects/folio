@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/constants";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -39,7 +40,7 @@ export default function Navbar() {
           <div className="flex">
             <div className="flex flex-shrink-0 items-center">
               <Link href="/" className="text-xl font-semibold">
-                Fol.io
+                {siteConfig.name}
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
