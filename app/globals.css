@@ -51,6 +51,21 @@ body {
     --leading-tight: 1.2;
     --leading-normal: 1.5;
     --leading-relaxed: 1.625;
+
+    /* Marketing Gradients */
+    --gradient-primary: 214 100% 50%; /* blue-400 */
+    --gradient-secondary: 234 89% 74%; /* indigo-500 */
+    --gradient-tertiary: 271 91% 65%; /* purple-600 */
+
+    /* Background Gradients */
+    --bg-light-start: 0 0% 100%; /* white */
+    --bg-light-mid: 214 100% 97%; /* blue-50 */
+    --bg-light-end: 271 100% 97%; /* purple-50 */
+
+    /* Dark Mode Background Gradients */
+    --bg-dark-start: 0 0% 9%; /* gray-900 */
+    --bg-dark-mid: 0 0% 15%; /* gray-800 */
+    --bg-dark-end: 271 100% 21%; /* purple-900 */
   }
 
   .dark {
@@ -112,5 +127,38 @@ body {
   }
   .small {
     @apply font-body text-xs leading-normal;
+  }
+}
+
+@layer utilities {
+  .bg-grid-white {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+}
+
+/* Marketing Component Styles */
+@layer components {
+  .marketing-gradient {
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-primary))] via-[hsl(var(--gradient-secondary))] to-[hsl(var(--gradient-tertiary))];
+  }
+
+  .marketing-bg-gradient {
+    @apply bg-gradient-to-br from-[hsl(var(--bg-light-start))] via-[hsl(var(--bg-light-mid))] to-[hsl(var(--bg-light-end))] dark:from-[hsl(var(--bg-dark-start))] dark:via-[hsl(var(--bg-dark-mid))] dark:to-[hsl(var(--bg-dark-end))];
+  }
+
+  .marketing-grid {
+    @apply absolute inset-0;
+    background-size: 20px 20px;
+    background-image: linear-gradient(
+        to right,
+        rgba(148, 163, 184, 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
   }
 }
