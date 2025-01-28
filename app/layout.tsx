@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Outfit, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
@@ -15,9 +16,19 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Fol.io - Portfolio Builder",
+  metadataBase: new URL("https://fol.io"), // your domain
+  title: {
+    template: "Fol.io | %s",
+    default: "Fol.io - Portfolio Builder",
+  },
   description:
-    "Create and deploy your professional portfolio in minutes with zero friction",
+    "Build and deploy your professional portfolio with no coding required.",
+  keywords: [
+    "portfolio builder",
+    "web portfolio",
+    "personal website",
+    "no-code portfolio",
+  ],
 };
 
 export default function RootLayout({
@@ -38,6 +49,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
