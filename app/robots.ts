@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://fol.io/sitemap.xml", // Next.js will generate this URL
+    sitemap: "https://usefolio.online/sitemap.xml", // Next.js will generate this URL
   };
 }

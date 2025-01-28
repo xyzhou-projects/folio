@@ -1,6 +1,6 @@
-# Fol.io
+# UseFolio
 
-[![CI](https://github.com/xyzhou-projects/folio/actions/workflows/ci.yml/badge.svg)](https://github.com/xyzhou-projects/folio/actions/workflows/ci.yml)
+[![CI](https://github.com/xyzhou-projects/usefolio/actions/workflows/ci.yml/badge.svg)](https://github.com/xyzhou-projects/usefolio/actions/workflows/ci.yml)
 
 A frictionless portfolio builder with instant preview and pay-to-export model.
 

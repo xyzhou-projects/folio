@@ -20,8 +20,11 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "Fol.io",
+            name: "UseFolio",
             applicationCategory: "Portfolio Builder",
+            description:
+              "Build and deploy your professional portfolio with no coding required",
+            url: "https://usefolio.online",
             offers: {
               "@type": "Offer",
               price: "0",
