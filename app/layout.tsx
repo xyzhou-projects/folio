@@ -15,9 +15,19 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Fol.io - Portfolio Builder",
+  metadataBase: new URL("https://fol.io"), // your domain
+  title: {
+    template: "Fol.io | %s",
+    default: "Fol.io - Portfolio Builder",
+  },
   description:
-    "Create and deploy your professional portfolio in minutes with zero friction",
+    "Build and deploy your professional portfolio with no coding required.",
+  keywords: [
+    "portfolio builder",
+    "web portfolio",
+    "personal website",
+    "no-code portfolio",
+  ],
 };
 
 export default function RootLayout({
